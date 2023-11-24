@@ -180,7 +180,8 @@ bool InitLNS::run()
                                      0, num_of_colliding_pairs);
     }
 
-    printResult();
+    if (screen >= 1)
+        printResult();
     return (num_of_colliding_pairs == 0);
 }
 bool InitLNS::runGCBS()

@@ -62,11 +62,12 @@ void AnytimeBCBS::run()
             solution[i] = *bcbs.paths[i];
     }
     bcbs.clearSearchEngines();
-    cout << getSolverName() << ": Iterations = " << iteration_stats.size() << ", "
-         << "lower bound = " << sum_of_costs_lowerbound << ", "
-         << "solution cost = " << sum_of_costs << ", "
-         << "initial solution cost = " << iteration_stats.front().sum_of_costs << ", "
-         << "runtime = " << runtime << endl;
+    if (screen >= 1)
+        cout << getSolverName() << ": Iterations = " << iteration_stats.size() << ", "
+            << "lower bound = " << sum_of_costs_lowerbound << ", "
+            << "solution cost = " << sum_of_costs << ", "
+            << "initial solution cost = " << iteration_stats.front().sum_of_costs << ", "
+            << "runtime = " << runtime << endl;
 }
 
 
